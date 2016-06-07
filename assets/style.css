@@ -51,7 +51,8 @@ header {
 nav {
   float: right;
   position: relative;
-  top: 132px;
+  /* TODO Fix position */
+  top: 131px;
 }
 
 .logo img {
