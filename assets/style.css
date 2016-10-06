@@ -11,20 +11,21 @@ body {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 
-a,
-a:visited,
-a:active {
-  color: #263A6C;
+a {
   text-decoration: none;
+}
+
+.content-link {
+  color: #263A6C;
   padding-bottom: 1px;
   border-bottom: 1px solid #98BF55;
 }
 
-a:hover {
+.content-link:hover {
   color: #98BF55;
 }
 
-a.no-link-style {
+.no-link-style {
   border: none;
   color: inherit;
 }
@@ -107,5 +108,16 @@ ul.top-nav li:hover {
 
 footer {
   background: #4c4c4c;
-  height: 75px;
+  padding: 40px;
+}
+
+.footer-link {
+  display: inline-block;
+  border: 1px solid #FED50C;
+  padding: 6px 40px;
+  text-transform: uppercase;
+  background: none;
+  color: #FED50C;
+  font-weight: bold;
+  margin-right: 18px;
 }
