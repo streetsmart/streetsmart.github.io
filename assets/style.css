@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   min-height: 100%;
@@ -31,11 +35,18 @@ a {
 }
 
 .wrapper {
-  width: 960px;
   max-width: 960px;
   margin: 0 auto 0 auto;
   overflow: auto;
+  padding: 0 20px;
 }
+
+.wrapper-no-pad {
+  max-width: 920px;
+  margin: 0 auto 0 auto;
+  overflow: auto;
+}
+
 
 
 
@@ -43,17 +54,16 @@ a {
 
 header {
   background: #ededed;
+  overflow: auto;
 }
 
 .logo {
-  float: left;
+  /*float: left;*/
 }
 
 nav {
   float: right;
-  position: relative;
-  /* TODO Fix position */
-  top: 131px;
+  vertical-align: bottom;
 }
 
 .logo img {
@@ -87,13 +97,41 @@ ul.top-nav li:hover {
   color: #cecece;
 }
 
+/* Main Content */
+
 #hero {
-  height: 443px;
-  margin: 30px 0 40px 0;
   position: relative;
+  height: 443px;
+  max-width: 920px;
+  margin: 30px auto;
+  background-image: url('../assets/imgs/hero.png');
 }
 
-/* Main Content */
+.cta {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+}
+
+.cta-link {
+  position: relative;
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 10px 18px;
+}
+
+.cta-link:hover {
+  color: #333;
+  background: #F8D349;
+}
+
+.cta-link + .cta-link {
+  margin-left: 30px;
+}
 
 #main {
   padding: 0 0 40px 0;
@@ -120,4 +158,15 @@ footer {
   color: #FED50C;
   font-weight: bold;
   margin-right: 18px;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 700px) {
+  header { padding: 0; }
+  .logo { display: block; float: none;}
+  nav {display: block; float: none; top: 0;}
+  ul.top-nav li + li { margin-left: 0; margin-top: 3px;}
+  ul.top-nav li { display: block; padding: 14px;}
+  .cta-link + .cta-link { margin-left: 0; margin-top: 18px;}
+  .logo { padding-left: 20px; }
 }
